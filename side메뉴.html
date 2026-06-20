@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>사이드 메뉴</title>
+   <style>
+       @import url('https://fonts.googleapis.com/css2?family=Monoton&family=Play&display=swap');
+       @import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0-2/css/all.min.css');
+       @import url('css/reset.css');
+
+       body{font:14px 'Play', sans-serif;}
+       h1{font-family: 'Monotn', cursive;}
+
+       .aside .contents img {width:210px; height:70px; opacity: 0.3; transition: .5s;}
+       
+       #home {position: relative; bottom:0; width:100%; height:930px; overflow: hidden; background-color: sandybrown; transition: .5s;}
+       .aside {position:absolute; right:-850px; bottom:0px; width:800px; height:930px; transform: skewX(-40deg); background:rgb(28, 186, 248) ;}
+       .aside .contents {position: absolute; left:100px; top:0;  width: 400px; height:100%; padding:300px 50px 0; box-sizing: border-box; background-color:rgba(11, 11, 11, 0.5);}
+       .aside .contents li {position:absolute; transform: translateX(200px); }
+       .aside .contents li:nth-of-type(1) {top:400px;transition: .3s;}
+       .aside .contents li:nth-of-type(2) {top:500px; transition: .6s;}
+       .aside .contents li:nth-of-type(3) {top:600px;transition: .9s;}
+       .aside .contents li:nth-of-type(4) {top:700px; transition: 1.2s;}
+       .aside:hover {right:-500px;}
+       .aside:hover .contents {left:50px;}
+       .aside:hover .contents li {transform:translateX(0px); } 
+       .aside .contents h3 {margin:-10px; padding-left:10px; background:#0B2A4A ; transform:skewX(40deg);}
+       .aside .contents img:hover {opacity: 1;}
+  
+
+       /* 사이드 메뉴 버튼 */
+       .aside .btn{position:absolute; right:170x; bottom:70px; width:70px; height: 40px; transform: skewX(40deg);}
+       .aside .btn li {position: absolute; top:0; right:0px; width:20px; float: left; font-size:3em; color:sandybrown;}
+       .aside .btn li:nth-of-type(1){animation:move .5s linear 0s infinite;}
+       .aside .btn li:nth-of-type(2){animation:move .5s linear 0.5s infinite;}
+       .aside .btn li:nth-of-type(3){animation:move .5s linear 1s infinite;}
+       @keyframes move {
+           0% { right:0px; opacity:1;}
+           100%{right:60px; opacity: 0;}
+       }
+   </style>
+</head>
+<body>
+<div id="home">
+   <div class="aside">
+    <ul class="btn">
+        <li><i class="fas fa-angle-double-left"></i></li>
+        <li><i class="fas fa-angle-double-left"></i></li>
+        <li><i class="fas fa-angle-double-left"></i></li>
+    </ul>
+       <ul class="contents">
+           <li>
+               <h3>제목1</h3>
+               <p><a href="#"><img src="images/side1.gif" alt=""></a></p>
+           </li>
+           <li>
+               <h3>제목2</h3>
+               <p><a href="#"><img src="images/side2.png" alt=""></a></p>
+           </li>
+           <li>
+               <h3>제목3</h3>
+               <p><a href="#"><img src="images/side1.gif" alt=""></a></p>
+           </li>
+           <li>
+               <h3>제목4</h3>
+               <p><a href="#"><img src="images/side2.png" alt=""></a></p>
+           </li>
+       </ul>
+  
+   </div>
+</div>
+</body>
+</html>

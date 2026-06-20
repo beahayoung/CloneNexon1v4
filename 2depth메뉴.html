@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>2depth</title>
+   <style>
+   @import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0-2/css/all.min.css');
+   @import url('css/reset.css');
+
+   #header {position:absolute; left:-400px; width:800px; height:935px; background:rgba(0,0,0,0.5); transform: skewX(-40deg);}
+   
+   /* 1depth */
+   #header .nav {position:absolute; top:200px; right:0;}
+   #header .nav .main > li {position:relative; margin: 10px 0; border-bottom:1px solid rgba(250, 233, 0, 0.959); }
+   #header .nav .main > li:nth-of-type(1) {background-color:rgba(0, 162, 255, 0.74);}
+   #header .nav .main > li:hover {background-color:rgba(13, 0, 83, 0.856);}
+   #header .nav a {display:block; width:200px; transform: skewX(40deg); text-align: right;  padding:10px; margin-right: 20px; color:white;}
+   #header .nav .main .fas {margin-right: 20px;}
+   #header .nav .main > li:hover .sub {opacity: 0.8; left:240px; }
+   /* 2depth */
+   #header .nav .sub {position:absolute; top:0; left:-100px; opacity:0; transition:.4s;}
+   #header .nav .sub li {border:1px dotted rgba(250, 233, 0, 0.959); background-color:rgba(250, 233, 0, 0.959);}
+   #header .nav .sub li:hover {background-color:rgba(0, 162, 255, 0.74); color:#333;}
+   #header .nav .sub li:hover a {color:rgba(13, 0, 83, 0.856);}
+   </style>
+</head>
+<body>
+<div id="header">
+ <div class="nav">
+    <ul class="main">
+       <li><a href="#"><i class="fas fa-sync-alt fa-spin"></i>메뉴1</a>
+         <ul class="sub">
+            <li><a href="#">서브1</a></li>
+            <li><a href="#">서브2</a></li>
+            <li><a href="#">서브3</a></li>
+         </ul>
+      </li>
+       <li><a href="#">메뉴2</a></li>
+       <li><a href="#">메뉴3</a></li>
+       <li><a href="#">메뉴4</a>
+         <ul class="sub">
+            <li><a herf="#">서브1</a></li>
+            <li><a herf="#">서브2</a></li>
+            <li><a herf="#">서브3</a></li>
+            <li><a herf="#">서브4</a></li>
+         </ul>
+      </li>
+       <li><a href="#">메뉴5</a></li>
+    </ul>
+ </div> 
+</div>  
+</body>
+</html>
